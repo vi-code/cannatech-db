@@ -9,13 +9,13 @@ variable "cidr_block" {
 }
 
 variable "public_subnets" {
-  type        = list(string)
-  description = "The CIDR blocks to use for the public subnets"
+  type        = list(map(string))
+  description = "A list of maps containing information about the public subnets."
 }
 
 variable "private_subnets" {
-  type        = list(string)
-  description = "The CIDR blocks to use for the private subnets"
+  type        = list(map(string))
+  description = "A list of maps containing information about the private subnets."
 }
 
 variable "environment" {

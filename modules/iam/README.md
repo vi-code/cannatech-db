@@ -40,7 +40,3 @@ This code assumes that you have already created an RDS instance and that its ARN
 In your Lambda function configuration, specify the IAM role created by this module by including the following code:
 
 `role = module.lambda_rds_access.lambda_role_arn` 
-
-## Conclusion
-
-This Terraform module makes it easy to create an IAM policy and role for a Lambda function to access an Amazon RDS database. By using Terraform, you can automate the process of creating and updating the policy and role, ensuring that your Lambda functions always have the necessary permissions to interact with the database.

@@ -43,3 +43,8 @@ module "rds" {
   vpc_id     = module.vpc.vpc_id
   subnet_ids = ["subnet-005df394e3bff52d9", "subnet-059900938e682741e", "subnet-0b8b06e8611f1561f"]
 }
+
+module "iam" {
+  source           = "./modules/iam"
+  rds_instance_arn = module.rds.db_instance_id
+}
